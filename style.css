@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * CSS Responsive Framework
  * Christian J. Gibbs
@@ -22,16 +23,29 @@ html {
 body {
   margin: 0; }
 
+xmp {
+  background-color: #f9f9f9;
+  border: 1px solid #e3e3e3;
+  color: #222; }
+
+hr {
+  max-width: 80%;
+  margin: 0 auto; }
+
 .clearfix {
   overflow: auto;
   zoom: 1; }
+
+.customRow {
+  background-color: red; }
 
 .row {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; }
-  .row .col:first-child, .row .col-1-1:first-child, .row .col-1-2:first-child, .row .col-1-3:first-child, .row .col-1-4:first-child, .row .col-1-5:first-child, .row .col-1-6:first-child, .row .col-1-7:first-child, .row .col-1-8:first-child, .row .col-1-9:first-child, .row .col-1-10:first-child, .row .col-1-11:first-child, .row .col-1-12:first-child, .row .load-90:first-child, .row .load-80:first-child, .row .load-70:first-child, .row .load-60:first-child, .row .load-50:first-child, .row .load-40:first-child, .row .load-30:first-child, .row .load-20:first-child, .row .load-10:first-child {
+  overflow: hidden;
+  margin: 5px auto; }
+  .row .col:first-child, .row .col-1-1:first-child, .row .col-1-2:first-child, .row .col-1-3:first-child, .row .col-1-4:first-child, .row .col-1-5:first-child, .row .col-1-6:first-child, .row .col-1-7:first-child, .row .col-1-8:first-child, .row .col-1-9:first-child, .row .col-1-10:first-child, .row .col-1-11:first-child, .row .col-1-12:first-child {
     margin-left: 0%; }
 
 .row::after, .row::before {
@@ -70,11 +84,10 @@ nav ul {
 /**
  *  III. Grids
  */
-.col, .col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-1-5, .col-1-6, .col-1-7, .col-1-8, .col-1-9, .col-1-10, .col-1-11, .col-1-12, .load-90, .load-80, .load-70, .load-60, .load-50, .load-40, .load-30, .load-20, .load-10 {
+.col, .col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-1-5, .col-1-6, .col-1-7, .col-1-8, .col-1-9, .col-1-10, .col-1-11, .col-1-12 {
   padding: 1% 0;
-  text-align: center;
   float: left;
-  margin: 0% 0 0% 1.5%; }
+  margin: 0.75% 0 0% 1.5%; }
 
 /* Demo */
 .colRowDemo {
@@ -82,7 +95,8 @@ nav ul {
   margin-top: 10px; }
 
 .colDemo {
-  background-color: #e3e3e3; }
+  background-color: #e3e3e3;
+  text-align: center; }
 
 /* Grid 12 */
 .col-1-1 {
@@ -161,15 +175,15 @@ nav ul {
 /**
  *  IV. Loading
  */
-.load, .load-100 {
+.load, .load-100, .load-90, .load-80, .load-70, .load-60, .load-50, .load-40, .load-30, .load-20, .load-10 {
   float: left;
   text-align: center;
-  padding: 10px 0; }
+  padding: 10px 0;
+  margin: 0px; }
 
 /* Demo */
 .loadRowDemo {
-  background-color: #f3f3f3;
-  margin-top: 10px; }
+  background-color: #f3f3f3; }
 
 .loadDemo {
   background-color: #e3e3e3; }
@@ -247,5 +261,76 @@ nav ul {
   color: #477f22; }
   .alert-sucess .alert-close {
     color: #477f22; }
+
+/**
+ * VI. Panels
+ */
+.panel {
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 10px 0px; }
+  .panel .panel-title, .panel .panel-body {
+    padding: 10px; }
+    .panel .panel-title h1, .panel .panel-title h2, .panel .panel-title h3, .panel .panel-title h4, .panel .panel-title h5, .panel .panel-title h6, .panel .panel-title p, .panel .panel-body h1, .panel .panel-body h2, .panel .panel-body h3, .panel .panel-body h4, .panel .panel-body h5, .panel .panel-body h6, .panel .panel-body p {
+      margin: 0px; }
+
+.panel-red-l {
+  border: 1px solid #f39690; }
+  .panel-red-l .panel-title {
+    background-color: #f39690;
+    color: #913027; }
+
+.panel-red-d {
+  border: 1px solid #f05657; }
+  .panel-red-d .panel-title {
+    background-color: #f05657;
+    color: #ffffff; }
+
+.panel-green-l {
+  border: 1px solid #b7edae; }
+  .panel-green-l .panel-title {
+    background-color: #b7edae;
+    color: #4e8e34; }
+
+.panel-green-d {
+  border: 1px solid #4ae971; }
+  .panel-green-d .panel-title {
+    background-color: #4ae971;
+    color: #ffffff; }
+
+.panel-blue-l {
+  border: 1px solid #a4e5ef; }
+  .panel-blue-l .panel-title {
+    background-color: #a4e5ef;
+    color: #2b9f9f; }
+
+.panel-blue-d {
+  border: 1px solid #61a2ed; }
+  .panel-blue-d .panel-title {
+    background-color: #61a2ed;
+    color: #ffffff; }
+
+/**
+ * VII. Breadcrumbs
+ */
+.breadcrumbs {
+  overflow: hidden;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px; }
+  .breadcrumbs ul {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0; }
+    .breadcrumbs ul li {
+      float: left; }
+      .breadcrumbs ul li::before {
+        content: " / ";
+        color: #adadad; }
+      .breadcrumbs ul li:last-child a {
+        color: #7e7e7e; }
+      .breadcrumbs ul li a {
+        text-decoration: none;
+        color: #0086ff; }
 
 /*# sourceMappingURL=style.css.map */
