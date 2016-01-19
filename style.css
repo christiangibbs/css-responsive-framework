@@ -1,0 +1,155 @@
+/**
+ * CSS Responsive Framework
+ * Christian J. Gibbs
+ * Version 1.0
+ * Licensed under MIT Open Source
+ */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 75%; }
+
+body {
+  margin: 0; }
+
+.clearfix {
+  overflow: auto;
+  zoom: 1; }
+
+/* Top bar and Navigation */
+.top-bar {
+  padding: 0.5em;
+  background-color: #e3e3e3; }
+  .top-bar .top-bar-left {
+    float: left; }
+  .top-bar .top-bar-middle {
+    left: 50%; }
+  .top-bar .top-bar-right {
+    float: right; }
+
+nav ul {
+  float: left;
+  list-style: none;
+  padding: 0; }
+  nav ul li {
+    display: inline;
+    float: left;
+    width: auto; }
+    nav ul li a {
+      display: block;
+      padding: 0 1.25em;
+      text-decoration: none;
+      color: #0086ff; }
+      nav ul li a:hover {
+        text-decoration: underline; }
+
+.row {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+  .row .col:first-child, .row .col1of1:first-child, .row .col1of2:first-child, .row .col1of3:first-child, .row .col1of4:first-child, .row .col1of5:first-child, .row .col1of6:first-child, .row .col1of7:first-child, .row .col1of8:first-child, .row .col1of9:first-child, .row .col1of10:first-child, .row .col1of11:first-child, .row .col1of12:first-child, .row .load90:first-child, .row .load80:first-child, .row .load70:first-child, .row .load60:first-child, .row .load50:first-child, .row .load40:first-child, .row .load30:first-child, .row .load20:first-child, .row .load10:first-child {
+    margin-left: 0%; }
+
+.row::after, .row::before {
+  content: " ";
+  display: table; }
+
+/* Column variables */
+.col, .col1of1, .col1of2, .col1of3, .col1of4, .col1of5, .col1of6, .col1of7, .col1of8, .col1of9, .col1of10, .col1of11, .col1of12, .load90, .load80, .load70, .load60, .load50, .load40, .load30, .load20, .load10 {
+  padding: 1% 0;
+  text-align: center;
+  float: left;
+  margin: 0% 0 0% 1.5%; }
+
+/* Demo */
+.colRowDemo {
+  background-color: #f3f3f3;
+  margin-top: 10px; }
+
+.colDemo {
+  background-color: #e3e3e3; }
+
+/* Grid 12 */
+.col1of1 {
+  width: 100%; }
+
+.col1of2 {
+  width: 49.25%; }
+
+.col1of3 {
+  width: 32.33333%; }
+
+.col1of4 {
+  width: 23.875%; }
+
+.col1of5 {
+  width: 18.8%; }
+
+.col1of6 {
+  width: 15.41667%; }
+
+.col1of7 {
+  width: 13%; }
+
+.col1of8 {
+  width: 11.1875%; }
+
+.col1of9 {
+  width: 9.77778%; }
+
+.col1of10 {
+  width: 8.65%; }
+
+.col1of11 {
+  width: 7.72727%; }
+
+.col1of12 {
+  width: 6.95833%; }
+
+/* loading */
+.load, .load100 {
+  float: left;
+  text-align: center;
+  padding: 10px 0; }
+
+/* Demo */
+.loadRowDemo {
+  background-color: #f3f3f3;
+  margin-top: 10px; }
+
+.loadDemo {
+  background-color: #e3e3e3; }
+
+.load100 {
+  width: 100%; }
+
+.load90 {
+  width: 90%; }
+
+.load80 {
+  width: 80%; }
+
+.load70 {
+  width: 70%; }
+
+.load60 {
+  width: 60%; }
+
+.load50 {
+  width: 50%; }
+
+.load40 {
+  width: 40%; }
+
+.load30 {
+  width: 30%; }
+
+.load20 {
+  width: 20%; }
+
+.load10 {
+  width: 10%; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,204 @@
+@charset "UTF-8"
+/**
+  * CSS Responsive Framework
+  * Christian J. Gibbs
+  * Version 1.0
+  * Licensed under MIT Open Source
+  */
+
+$font-main: sans-serif
+
+html
+  font-family: $font-main
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  font-size: 75%
+
+body
+  margin: 0
+
+.clearfix
+  overflow: auto
+  zoom: 1
+
+/* Top bar and Navigation */
+
+.top-bar
+  padding: 0.5em
+  background-color: #e3e3e3
+
+  .top-bar-left
+    float: left
+
+  .top-bar-middle
+    left: 50%
+
+  .top-bar-right
+    float: right
+
+nav
+
+  ul
+    float: left
+    list-style: none
+    padding: 0
+
+    li
+      display: inline
+      float: left
+      width: auto
+
+      a
+        display: block
+        padding: 0 1.25em
+        text-decoration: none
+        color: #0086ff
+        &:hover
+          text-decoration: underline
+
+.row
+  max-width: 75em
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+  .col
+    &:first-child
+      margin-left: 0%
+  //
+    &:last-child
+      margin-left: 0%
+      margin-right: 0%
+//
+  .col1of1
+    &:first-child
+      margin-right: 1%
+    &:last-child
+      margin-left: 1%
+
+.row::after, .row::before
+  content: ' '
+  display: table
+
+
+/* Column variables */
+
+$colWidth: 100%
+$marginLeft: 1.5%
+$singleCol: $colWidth/12
+
+.col
+  padding: 1% 0
+  text-align: center
+  float: left
+  margin: 0% 0 0% 1.5%
+
+/* Demo */
+.colRowDemo
+  background-color: #f3f3f3
+  margin-top: 10px
+
+.colDemo
+  background-color: #e3e3e3
+
+/* Grid 12 */
+.col1of1
+  @extend .col
+  width: 100%
+
+.col1of2
+  @extend .col
+  width: $colWidth/2 - ($marginLeft/2)
+
+.col1of3
+  @extend .col
+  width: $colWidth/3 - 2*($marginLeft/3)
+
+.col1of4
+  @extend .col
+  width: $colWidth/4 - 3*($marginLeft/4)
+
+.col1of5
+  @extend .col
+  width: $colWidth/5 - 4*($marginLeft/5)
+
+.col1of6
+  @extend .col
+  width: $colWidth/6 - 5*($marginLeft/6)
+
+.col1of7
+  @extend .col
+  width: $colWidth/7 - 6*($marginLeft/7)
+
+.col1of8
+  @extend .col
+  width: $colWidth/8 - 7*($marginLeft/8)
+
+.col1of9
+  @extend .col
+  width: $colWidth/9 - 8*($marginLeft/9)
+
+.col1of10
+  @extend .col
+  width: $colWidth/10 - 9*($marginLeft/10)
+
+.col1of11
+  @extend .col
+  width: $colWidth/11 - 10*($marginLeft/11)
+
+.col1of12
+  @extend .col
+  width: $colWidth/12 - 11*($marginLeft/12)
+
+/* loading */
+.load
+  float: left
+  text-align: center
+  padding: 10px 0
+
+/* Demo */
+.loadRowDemo
+  background-color: #f3f3f3
+  margin-top: 10px
+
+.loadDemo
+  background-color: #e3e3e3
+
+.load100
+  @extend .load
+  width: 100%
+
+.load90
+  @extend .col
+  width: 90%
+
+.load80
+  @extend .col
+  width: 80%
+
+.load70
+  @extend .col
+  width: 70%
+
+.load60
+  @extend .col
+  width: 60%
+
+.load50
+  @extend .col
+  width: 50%
+
+.load40
+  @extend .col
+  width: 40%
+
+.load30
+  @extend .col
+  width: 30%
+
+.load20
+  @extend .col
+  width: 20%
+
+.load10
+  @extend .col
+  width: 10%
