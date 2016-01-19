@@ -4,6 +4,16 @@
   * Christian J. Gibbs
   * Version 1.0
   * Licensed under MIT Open Source
+  * Index
+  * I. General
+  * II. Navigations
+  * III. Grids
+  * IV. Loading
+  * V. Alerts
+  */
+
+/**
+  * I. General
   */
 
 $font-main: sans-serif
@@ -21,33 +31,42 @@ body
   overflow: auto
   zoom: 1
 
-/* Top bar and Navigation */
+.row
+  max-width: 80%
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+  .col
+    &:first-child
+      margin-left: 0%
+
+.row::after, .row::before
+  content: ' '
+  display: table
+
+/**
+  *  II. Navigations
+  */
 
 .top-bar
   padding: 0.5em
   background-color: #e3e3e3
-
   .top-bar-left
     float: left
-
   .top-bar-middle
     left: 50%
-
   .top-bar-right
     float: right
 
 nav
-
   ul
     float: left
     list-style: none
     padding: 0
-
     li
       display: inline
       float: left
       width: auto
-
       a
         display: block
         padding: 0 1.25em
@@ -56,31 +75,9 @@ nav
         &:hover
           text-decoration: underline
 
-.row
-  max-width: 75em
-  margin-left: auto
-  margin-right: auto
-  overflow: hidden
-  .col
-    &:first-child
-      margin-left: 0%
-  //
-    &:last-child
-      margin-left: 0%
-      margin-right: 0%
-//
-  .col1of1
-    &:first-child
-      margin-right: 1%
-    &:last-child
-      margin-left: 1%
-
-.row::after, .row::before
-  content: ' '
-  display: table
-
-
-/* Column variables */
+/**
+  *  III. Grids
+  */
 
 $colWidth: 100%
 $marginLeft: 1.5%
@@ -101,55 +98,99 @@ $singleCol: $colWidth/12
   background-color: #e3e3e3
 
 /* Grid 12 */
-.col1of1
+.col-1-1
   @extend .col
   width: 100%
 
-.col1of2
+.col-1-2
   @extend .col
   width: $colWidth/2 - ($marginLeft/2)
 
-.col1of3
+.col-1-3
   @extend .col
   width: $colWidth/3 - 2*($marginLeft/3)
 
-.col1of4
+.col-1-4
   @extend .col
   width: $colWidth/4 - 3*($marginLeft/4)
 
-.col1of5
+.col-1-5
   @extend .col
   width: $colWidth/5 - 4*($marginLeft/5)
 
-.col1of6
+.col-1-6
   @extend .col
   width: $colWidth/6 - 5*($marginLeft/6)
 
-.col1of7
+.col-1-7
   @extend .col
   width: $colWidth/7 - 6*($marginLeft/7)
 
-.col1of8
+.col-1-8
   @extend .col
   width: $colWidth/8 - 7*($marginLeft/8)
 
-.col1of9
+.col-1-9
   @extend .col
   width: $colWidth/9 - 8*($marginLeft/9)
 
-.col1of10
+.col-1-10
   @extend .col
   width: $colWidth/10 - 9*($marginLeft/10)
 
-.col1of11
+.col-1-11
   @extend .col
   width: $colWidth/11 - 10*($marginLeft/11)
 
-.col1of12
+.col-1-12
   @extend .col
   width: $colWidth/12 - 11*($marginLeft/12)
 
-/* loading */
+/* 768 */
+@media screen and (max-width: 768px)
+  .col-1-4
+    width: $colWidth/2 - 1*($marginLeft/2)
+    margin-bottom: 10px
+    &:nth-child(3)
+      margin-left: 0px
+
+  .col-1-6
+    width: $colWidth/3 - 2*($marginLeft/3)
+    margin-bottom: 10px
+    &:nth-child(4)
+      margin-left: 0px
+
+  .col-1-8
+    width: $colWidth/4 - 3*($marginLeft/4)
+    margin-bottom: 10px
+    &:nth-child(5)
+      margin-left: 0px
+
+  .col-1-10
+    width: $colWidth/5 - 4*($marginLeft/5)
+    margin-bottom: 10px
+    &:nth-child(6)
+      margin-left: 0px
+
+  .col-1-12
+    width: $colWidth/6 - 5*($marginLeft/6)
+    margin-bottom: 10px
+    &:nth-child(7)
+      margin-left: 0px
+
+/* 376 */
+@media screen and (max-width: 376px)
+
+  .col-1-12
+    width: $colWidth/3 - 2*($marginLeft/3)
+    &:nth-child(4), &:nth-child(10)
+      margin-left: 0px
+
+
+/**
+  *  IV. Loading
+  */
+
 .load
   float: left
   text-align: center
@@ -163,42 +204,87 @@ $singleCol: $colWidth/12
 .loadDemo
   background-color: #e3e3e3
 
-.load100
+.load-100
   @extend .load
   width: 100%
 
-.load90
+.load-90
   @extend .col
   width: 90%
 
-.load80
+.load-80
   @extend .col
   width: 80%
 
-.load70
+.load-70
   @extend .col
   width: 70%
 
-.load60
+.load-60
   @extend .col
   width: 60%
 
-.load50
+.load-50
   @extend .col
   width: 50%
 
-.load40
+.load-40
   @extend .col
   width: 40%
 
-.load30
+.load-30
   @extend .col
   width: 30%
 
-.load20
+.load-20
   @extend .col
   width: 20%
 
-.load10
+.load-10
   @extend .col
   width: 10%
+
+/**
+  * V. Alerts
+  */
+
+.alert
+  border-radius: 5px
+  overflow: hidden
+  margin-top: 10px
+  margin-bottom: 10px
+  padding: 10px
+
+.alert-close
+  float: right
+  text-decoration: none
+  &:after
+    content: 'X'
+
+.alert-danger
+  border: 1px solid #dd525f
+  background-color: #f95a67
+  color: #70191d
+  .alert-close
+    color: #70191d
+
+.alert-warning
+  border: 1px solid #dd9343
+  background-color: #f6a44b
+  color: #83622d
+  .alert-close
+    color: #83622d
+
+.alert-caution
+  border: 1px solid #dccc62
+  background-color: #f4e36d
+  color: #837e26
+  .alert-close
+    color: #837e26
+
+.alert-sucess
+  border: 1px solid #71be5c
+  background-color: #7ed366
+  color: #477f22
+  .alert-close
+    color: #477f22

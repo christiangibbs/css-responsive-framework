@@ -3,6 +3,15 @@
  * Christian J. Gibbs
  * Version 1.0
  * Licensed under MIT Open Source
+ * Index
+ * I. General
+ * II. Navigations
+ * III. Grids
+ * IV. Loading
+ * V. Alerts
+ */
+/**
+ * I. General
  */
 html {
   font-family: sans-serif;
@@ -17,7 +26,21 @@ body {
   overflow: auto;
   zoom: 1; }
 
-/* Top bar and Navigation */
+.row {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+  .row .col:first-child, .row .col-1-1:first-child, .row .col-1-2:first-child, .row .col-1-3:first-child, .row .col-1-4:first-child, .row .col-1-5:first-child, .row .col-1-6:first-child, .row .col-1-7:first-child, .row .col-1-8:first-child, .row .col-1-9:first-child, .row .col-1-10:first-child, .row .col-1-11:first-child, .row .col-1-12:first-child, .row .load-90:first-child, .row .load-80:first-child, .row .load-70:first-child, .row .load-60:first-child, .row .load-50:first-child, .row .load-40:first-child, .row .load-30:first-child, .row .load-20:first-child, .row .load-10:first-child {
+    margin-left: 0%; }
+
+.row::after, .row::before {
+  content: " ";
+  display: table; }
+
+/**
+ *  II. Navigations
+ */
 .top-bar {
   padding: 0.5em;
   background-color: #e3e3e3; }
@@ -44,20 +67,10 @@ nav ul {
       nav ul li a:hover {
         text-decoration: underline; }
 
-.row {
-  max-width: 75em;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden; }
-  .row .col:first-child, .row .col1of1:first-child, .row .col1of2:first-child, .row .col1of3:first-child, .row .col1of4:first-child, .row .col1of5:first-child, .row .col1of6:first-child, .row .col1of7:first-child, .row .col1of8:first-child, .row .col1of9:first-child, .row .col1of10:first-child, .row .col1of11:first-child, .row .col1of12:first-child, .row .load90:first-child, .row .load80:first-child, .row .load70:first-child, .row .load60:first-child, .row .load50:first-child, .row .load40:first-child, .row .load30:first-child, .row .load20:first-child, .row .load10:first-child {
-    margin-left: 0%; }
-
-.row::after, .row::before {
-  content: " ";
-  display: table; }
-
-/* Column variables */
-.col, .col1of1, .col1of2, .col1of3, .col1of4, .col1of5, .col1of6, .col1of7, .col1of8, .col1of9, .col1of10, .col1of11, .col1of12, .load90, .load80, .load70, .load60, .load50, .load40, .load30, .load20, .load10 {
+/**
+ *  III. Grids
+ */
+.col, .col-1-1, .col-1-2, .col-1-3, .col-1-4, .col-1-5, .col-1-6, .col-1-7, .col-1-8, .col-1-9, .col-1-10, .col-1-11, .col-1-12, .load-90, .load-80, .load-70, .load-60, .load-50, .load-40, .load-30, .load-20, .load-10 {
   padding: 1% 0;
   text-align: center;
   float: left;
@@ -72,44 +85,83 @@ nav ul {
   background-color: #e3e3e3; }
 
 /* Grid 12 */
-.col1of1 {
+.col-1-1 {
   width: 100%; }
 
-.col1of2 {
+.col-1-2 {
   width: 49.25%; }
 
-.col1of3 {
+.col-1-3 {
   width: 32.33333%; }
 
-.col1of4 {
+.col-1-4 {
   width: 23.875%; }
 
-.col1of5 {
+.col-1-5 {
   width: 18.8%; }
 
-.col1of6 {
+.col-1-6 {
   width: 15.41667%; }
 
-.col1of7 {
+.col-1-7 {
   width: 13%; }
 
-.col1of8 {
+.col-1-8 {
   width: 11.1875%; }
 
-.col1of9 {
+.col-1-9 {
   width: 9.77778%; }
 
-.col1of10 {
+.col-1-10 {
   width: 8.65%; }
 
-.col1of11 {
+.col-1-11 {
   width: 7.72727%; }
 
-.col1of12 {
+.col-1-12 {
   width: 6.95833%; }
 
-/* loading */
-.load, .load100 {
+/* 768 */
+@media screen and (max-width: 768px) {
+  .col-1-4 {
+    width: 49.25%;
+    margin-bottom: 10px; }
+    .col-1-4:nth-child(3) {
+      margin-left: 0px; }
+
+  .col-1-6 {
+    width: 32.33333%;
+    margin-bottom: 10px; }
+    .col-1-6:nth-child(4) {
+      margin-left: 0px; }
+
+  .col-1-8 {
+    width: 23.875%;
+    margin-bottom: 10px; }
+    .col-1-8:nth-child(5) {
+      margin-left: 0px; }
+
+  .col-1-10 {
+    width: 18.8%;
+    margin-bottom: 10px; }
+    .col-1-10:nth-child(6) {
+      margin-left: 0px; }
+
+  .col-1-12 {
+    width: 15.41667%;
+    margin-bottom: 10px; }
+    .col-1-12:nth-child(7) {
+      margin-left: 0px; } }
+/* 376 */
+@media screen and (max-width: 376px) {
+  .col-1-12 {
+    width: 32.33333%; }
+    .col-1-12:nth-child(4), .col-1-12:nth-child(10) {
+      margin-left: 0px; } }
+/**
+ *  IV. Loading
+ */
+.load, .load-100 {
   float: left;
   text-align: center;
   padding: 10px 0; }
@@ -122,34 +174,78 @@ nav ul {
 .loadDemo {
   background-color: #e3e3e3; }
 
-.load100 {
+.load-100 {
   width: 100%; }
 
-.load90 {
+.load-90 {
   width: 90%; }
 
-.load80 {
+.load-80 {
   width: 80%; }
 
-.load70 {
+.load-70 {
   width: 70%; }
 
-.load60 {
+.load-60 {
   width: 60%; }
 
-.load50 {
+.load-50 {
   width: 50%; }
 
-.load40 {
+.load-40 {
   width: 40%; }
 
-.load30 {
+.load-30 {
   width: 30%; }
 
-.load20 {
+.load-20 {
   width: 20%; }
 
-.load10 {
+.load-10 {
   width: 10%; }
+
+/**
+ * V. Alerts
+ */
+.alert {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px; }
+
+.alert-close {
+  float: right;
+  text-decoration: none; }
+  .alert-close:after {
+    content: "X"; }
+
+.alert-danger {
+  border: 1px solid #dd525f;
+  background-color: #f95a67;
+  color: #70191d; }
+  .alert-danger .alert-close {
+    color: #70191d; }
+
+.alert-warning {
+  border: 1px solid #dd9343;
+  background-color: #f6a44b;
+  color: #83622d; }
+  .alert-warning .alert-close {
+    color: #83622d; }
+
+.alert-caution {
+  border: 1px solid #dccc62;
+  background-color: #f4e36d;
+  color: #837e26; }
+  .alert-caution .alert-close {
+    color: #837e26; }
+
+.alert-sucess {
+  border: 1px solid #71be5c;
+  background-color: #7ed366;
+  color: #477f22; }
+  .alert-sucess .alert-close {
+    color: #477f22; }
 
 /*# sourceMappingURL=style.css.map */
