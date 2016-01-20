@@ -24,6 +24,10 @@ html
   -webkit-text-size-adjust: 100%
   font-size: 75%
 
+  @media screen and (max-width: 376px)
+    html
+      font-size: 50%
+
 body
   margin: 0
 
@@ -44,7 +48,7 @@ hr
   background-color: red
 
 .row
-  max-width: 80%
+  max-width: 90%
   margin-left: auto
   margin-right: auto
   overflow: hidden
@@ -101,6 +105,9 @@ $singleCol: $colWidth/12
   float: left
   margin: 0.75% 0 0% 1.5%
 
+.offset
+  float: right
+
 /* Demo */
 .colRowDemo
   background-color: #f3f3f3
@@ -111,89 +118,147 @@ $singleCol: $colWidth/12
   text-align: center
 
 /* Grid 12 */
-.col-1-1
+.col-1
   @extend .col
   width: 100%
 
-.col-1-2
+.col-2
   @extend .col
   width: $colWidth/2 - ($marginLeft/2)
 
-.col-1-3
+.col-3
   @extend .col
   width: $colWidth/3 - 2*($marginLeft/3)
 
-.col-1-4
+.col-4
   @extend .col
   width: $colWidth/4 - 3*($marginLeft/4)
 
-.col-1-5
+.col-5
   @extend .col
   width: $colWidth/5 - 4*($marginLeft/5)
 
-.col-1-6
+.col-6
   @extend .col
   width: $colWidth/6 - 5*($marginLeft/6)
 
-.col-1-7
+.col-7
   @extend .col
   width: $colWidth/7 - 6*($marginLeft/7)
 
-.col-1-8
+.col-8
   @extend .col
   width: $colWidth/8 - 7*($marginLeft/8)
 
-.col-1-9
+.col-9
   @extend .col
   width: $colWidth/9 - 8*($marginLeft/9)
 
-.col-1-10
+.col-10
   @extend .col
   width: $colWidth/10 - 9*($marginLeft/10)
 
-.col-1-11
+.col-11
   @extend .col
   width: $colWidth/11 - 10*($marginLeft/11)
 
-.col-1-12
+.col-12
   @extend .col
   width: $colWidth/12 - 11*($marginLeft/12)
 
 /* 768 */
 @media screen and (max-width: 768px)
-  .col-1-4
+
+  .col-2
+    width: 100%
+    margin: 5px 0px
+
+  .col-3
+    width: 100%
+    margin: 5px 0px
+
+  .col-4
+    width: 100%
+    margin: 5px 0px
+
+  .col-5
+    width: 100%
+    margin: 5px 0px
+
+  .col-6
+    width: 100%
+    margin: 5px 0px
+
+  .col-7
+    width: 100%
+    margin: 5px 0px
+
+  .col-8
+    width: 100%
+    margin: 5px 0px
+
+  .col-9
+    width: 100%
+    margin: 5px 0px
+
+  .col-10
+    width: 100%
+    margin: 5px 0px
+
+  .col-11
+    width: 100%
+    margin: 5px 0px
+
+  .col-12
+    width: 100%
+    margin: 5px 0px
+
+/*
+
+  .col-4
     width: $colWidth/2 - 1*($marginLeft/2)
     margin-bottom: 10px
     &:nth-child(3)
       margin-left: 0px
 
-  .col-1-6
+  .col-6
     width: $colWidth/3 - 2*($marginLeft/3)
     margin-bottom: 10px
     &:nth-child(4)
       margin-left: 0px
 
-  .col-1-8
+  .col-8
     width: $colWidth/4 - 3*($marginLeft/4)
     margin-bottom: 10px
     &:nth-child(5)
       margin-left: 0px
 
-  .col-1-10
+  .col-10
     width: $colWidth/5 - 4*($marginLeft/5)
     margin-bottom: 10px
     &:nth-child(6)
       margin-left: 0px
 
-  .col-1-12
+  .col-12
     width: $colWidth/6 - 5*($marginLeft/6)
     margin-bottom: 10px
     &:nth-child(7)
       margin-left: 0px
 
+@media screen and (max-width: 624px)
+  /* .col-2
+    width: 100%
+    margin-left: 0px
+
+  /* .col-3
+    width: 100%
+    margin-left: 0px
+
+
+
 /* 376 */
 @media screen and (max-width: 376px)
-
+/*
   .col-1-12
     width: $colWidth/3 - 2*($marginLeft/3)
     &:nth-child(4), &:nth-child(10)
@@ -219,42 +284,52 @@ $singleCol: $colWidth/12
 .load-100
   @extend .load
   width: 100%
+  background-color: #44ed4f
 
 .load-90
   @extend .load
   width: 90%
+  background-color: #7dee3e
 
 .load-80
   @extend .load
   width: 80%
+  background-color: #abee42
 
 .load-70
   @extend .load
   width: 70%
+  background-color: #e1ef4f
 
 .load-60
   @extend .load
   width: 60%
+  background-color: #f4d655
 
 .load-50
   @extend .load
   width: 50%
+  background-color: #f5bb4e
 
 .load-40
   @extend .load
   width: 40%
+  background-color: #f59a4f
 
 .load-30
   @extend .load
   width: 30%
+  background-color: #f5744a
 
 .load-20
   @extend .load
   width: 20%
+  background-color: #f5614d
 
 .load-10
   @extend .load
   width: 10%
+  background-color: #f55456
 
 /**
   * V. Alerts

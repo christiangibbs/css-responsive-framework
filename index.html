@@ -1,0 +1,321 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js/actions.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+  <section class="top-bar clearfix">
+    <div class="top-bar-left">
+      <nav>
+        <ul>
+          <li>
+            <span>Brand</span>
+          </li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="top-bar-right">
+      <nav>
+        <ul>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#">2</a>
+          </li>
+          <li>
+            <a href="#">3</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+<div class="row">
+  <h1>Getting Started</h1>
+  <h3>Downloading</h3>
+  <p>To start using this CSS Responsive Framework, simply download the compressed .zip version or clone the GitHub repository to your desktop.</p>
+  <xmp>
+    $ git clone https://github.com/christiangibbs/css-responsive-framework.git
+  </xmp>
+  <h3>Setting it up</h3>
+  <p>Once you have a copy of the framework, you need to reference the styleshseet and script (optional) in the &lt;head&gt; of all files you wish to use the framework.</p>
+  <xmp>
+    <head>
+      <link rel="stylesheet" type="text/css" href="css-responsive-framework/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="css-responsive-framework/actions.js"></script>
+    </head>
+  </xmp>
+  <h3>Requirements</h3>
+  <p>The only requirement for this framework is jQuery, however this is for only the extended features such as interactive elements.</p>
+</div>
+
+
+<div class="row">
+  <h1>Breadcrumbs</h1>
+</div>
+<div class="row">
+  <div class="breadcrumbs">
+    <ul>
+      <li>
+        <a href="#">Parent</a>
+      </li>
+      <li>
+        <a href="#">Child</a>
+      </li>
+      <li>
+        <a href="#">Current</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Breadcrumbs Example</h2>
+  <xmp>
+    <div class="breadcrumbs">
+      <ul>
+        <li>
+          <a href="#">Parent</a>
+        </li>
+        <li>
+          <a href="#">Child</a>
+        </li>
+        <li>
+          <a href="#">Current</a>
+        </li>
+      </ul>
+    </div>
+  </xmp>
+</div>
+
+<hr />
+
+<!-- Grid Layout -->
+
+<div class="row">
+  <h1>Grid Layout</h1>
+</div>
+
+<script>
+  for (i=1; i<7; i++) {
+    document.write('<div class="row">');
+    for (n=1; n<i+1; n++) {
+      document.write('<div class="colDemo col col-' + i +'">');
+      document.write(i + ' Col');
+      document.write('</div>');
+    }
+    document.write('</div>');
+  }
+</script>
+
+<div class="row">
+  <h2>Grid Layout Example</h2>
+  <xmp>
+    <div class="col col-3">
+      3 Col
+    </div>
+  </xmp>
+</div>
+
+<div class="row">
+  <h1>Offset Grid</h1>
+</div>
+
+<div class="row">
+  <div class="colDemo col col-3">
+    3 Col
+  </div>
+  <div class="colDemo col col-3">
+    3 Col
+  </div>
+  <div class="colDemo col col-5 offset">
+    5 Col Offset
+  </div>
+</div>
+
+<div class="row">
+  <h2>Offset Grid Example</h2>
+  <xmp>
+    <div class="colDemo col col-3">
+      3 Col
+    </div>
+    <div class="colDemo col col-3">
+      3 Col
+    </div>
+    <div class="colDemo col col-5 offset">
+      5 Col Offset
+    </div>
+  </xmp>
+</div>
+
+<hr />
+
+<!-- Progress bar -->
+
+<div class="row">
+  <h1>Progress Bar</h1>
+</div>
+
+<script>
+  for (n=100; n>0; n-=10) {
+    document.write('<div class="row loadRowDemo">');
+    document.write('<div class="loadDemo load load-' + n +'">');
+    document.write(n + '%');
+    document.write('</div>');
+    document.write('</div>');
+  }
+</script>
+
+<div class="row">
+  <h2>Progress Bar Example</h2>
+  <xmp>
+    <div class="load load-50">
+      50%
+    </div>
+  </xmp>
+</div>
+
+
+<hr />
+
+<!-- Alerts -->
+
+<div class="row">
+  <h1>Alerts</h1>
+</div>
+
+<div class="row">
+  <div class="alert alert-danger">
+    ALERT: Danger
+    <a class="alert-close"></a>
+  </div>
+  <div class="alert alert-warning">
+    ALERT: Warning
+    <a class="alert-close"></a>
+  </div>
+  <div class="alert alert-caution">
+    ALERT: Caution
+    <a class="alert-close"></a>
+  </div>
+  <div class="alert alert-sucess">
+    ALERT: Sucess
+    <a class="alert-close"></a>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Alert Example</h2>
+  <xmp>
+    <div class="alert alert-danger">
+      ALERT: Danger
+      <a class="alert-close"></a>
+    </div>
+  </xmp>
+</div>
+
+<hr />
+
+<!-- Panels -->
+
+<div class="row">
+  <h1>Light Panels</h1>
+</div>
+
+<div class="row">
+  <div class="panel panel-red-l">
+    <div class="panel-title">
+      <h2>Panel Title</h2>
+    </div>
+    <div class="panel-body">
+      <p>Panel Body</p>
+    </div>
+  </div>
+  <div class="panel panel-green-l">
+    <div class="panel-title">
+      <h2>Panel Title</h2>
+    </div>
+    <div class="panel-body">
+      <p>Panel Body</p>
+    </div>
+  </div>
+  <div class="panel panel-blue-l">
+    <div class="panel-title">
+      <h2>Panel Title</h2>
+    </div>
+    <div class="panel-body">
+      <p>Panel Body</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h1>Dark Panels</h1>
+</div>
+
+<div class="row">
+  <div class="panel panel-red-d">
+    <div class="panel-title">
+      <h2>Panel Title</h2>
+    </div>
+    <div class="panel-body">
+      <p>Panel Body</p>
+    </div>
+  </div>
+  <div class="panel panel-green-d">
+    <div class="panel-title">
+      <h2>Panel Title</h2>
+    </div>
+    <div class="panel-body">
+      <p>Panel Body</p>
+    </div>
+  </div>
+  <div class="panel panel-blue-d">
+    <div class="panel-title">
+      <h2>Panel Title</h2>
+    </div>
+    <div class="panel-body">
+      <p>Panel Body</p>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-2">
+    <h2>Light Example</h2>
+    <xmp>
+      <div class="panel panel-red-l">
+        <div class="panel-title">
+          <h2>Panel Title</h2>
+        </div>
+        <div class="panel-body">
+          <p>Panel Body</p>
+        </div>
+      </div>
+    </xmp>
+  </div>
+  <div class="col col-2">
+    <h2>Dark Example</h2>
+    <xmp>
+      <div class="panel panel-red-d">
+        <div class="panel-title">
+          <h2>Panel Title</h2>
+        </div>
+        <div class="panel-body">
+          <p>Panel Body</p>
+        </div>
+      </div>
+    </xmp>
+  </div>
+</div>
