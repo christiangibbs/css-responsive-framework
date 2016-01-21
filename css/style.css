@@ -59,30 +59,52 @@ hr {
  *  II. Navigations
  */
 .top-bar {
-  padding: 0.5em;
-  background-color: #e3e3e3; }
-  .top-bar .top-bar-left {
-    float: left; }
-  .top-bar .top-bar-middle {
-    left: 50%; }
-  .top-bar .top-bar-right {
-    float: right; }
+  height: 50px;
+  width: 100%;
+  background-color: #333333; }
+  .top-bar .col, .top-bar .col-1, .top-bar .col-2, .top-bar .col-3, .top-bar .col-4, .top-bar .col-5, .top-bar .col-6, .top-bar .col-7, .top-bar .col-8, .top-bar .col-9, .top-bar .col-10, .top-bar .col-11, .top-bar .col-12 {
+    padding: 0;
+    margin: 0; }
 
-nav ul {
-  float: left;
-  list-style: none;
-  padding: 0; }
-  nav ul li {
-    display: inline;
+.nav-dropdown ul {
+  width: 100%;
+  margin: 0;
+  background-color: #333333; }
+  .nav-dropdown ul li {
     float: left;
-    width: auto; }
-    nav ul li a {
+    list-style-type: none;
+    color: #ffffff;
+    position: relative;
+    margin: 0;
+    padding: 0; }
+    .nav-dropdown ul li:hover {
+      background-color: #222222; }
+    .nav-dropdown ul li:hover > ul {
+      display: block; }
+    .nav-dropdown ul li a {
+      height: 50px;
+      line-height: 50px;
+      padding: 0px 15px;
+      color: #ffffff;
       display: block;
-      padding: 0 1.25em;
-      text-decoration: none;
-      color: #0086ff; }
-      nav ul li a:hover {
-        text-decoration: underline; }
+      text-decoration: none; }
+    .nav-dropdown ul li ul li ul {
+      top: 0;
+      left: 100%;
+      position: absolute;
+      display: none; }
+    .nav-dropdown ul li ul li a {
+      padding-left: 5px;
+      height: 40px;
+      line-height: 40px; }
+  .nav-dropdown ul ul {
+    position: absolute;
+    display: none;
+    width: 150px;
+    padding: 0;
+    background-color: #333333; }
+    .nav-dropdown ul ul li {
+      float: none; }
 
 /**
  *  III. Grids
