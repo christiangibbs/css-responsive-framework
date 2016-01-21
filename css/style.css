@@ -6,14 +6,15 @@
  * Licensed under MIT Open Source
  * Index
  * I. General
- * II. Navigations
- * III. Grids
- * IV. Loading
- * V. Alerts
+ * II. Navigation
+ * III. Accordion
+ * IV. Grid
+ * V. Progress Bar
+ * VI. Alerts
+ * VII. Panels
+ * VIII. Breadcrumbs
  */
-/**
- * I. General
- */
+/* ----- I. General ----- */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -55,9 +56,7 @@ hr {
   content: " ";
   display: table; }
 
-/**
- *  II. Navigations
- */
+/* ----- II. Navigaiton ----- */
 .top-bar {
   height: 50px;
   width: 100%;
@@ -106,9 +105,20 @@ hr {
     .nav-dropdown ul ul li {
       float: none; }
 
-/**
- *  III. Grids
- */
+/* ----- III. Accordion ----- */
+.accordion dt {
+  background-color: #e3e3e3;
+  padding: 10px 0px; }
+  .accordion dt::before {
+    padding: 15px;
+    content: ">"; }
+.accordion dd {
+  margin: 0px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  overflow: hidden; }
+
+/* ----- IV. Grids ----- */
 .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   padding: 1% 0;
   float: left;
@@ -250,9 +260,7 @@ hr {
  *   width: $colWidth/3 - 2*($marginLeft/3)
  *   &:nth-child(4), &:nth-child(10)
  *     margin-left: 0px */
-/**
- *  IV. Loading
- */
+/* ----- V. Progress Bar ----- */
 .load, .load-100, .load-90, .load-80, .load-70, .load-60, .load-50, .load-40, .load-30, .load-20, .load-10 {
   float: left;
   text-align: center;
@@ -306,9 +314,7 @@ hr {
   width: 10%;
   background-color: #f55456; }
 
-/**
- * V. Alerts
- */
+/* ----- VI. Alerts ----- */
 .alert {
   border-radius: 5px;
   overflow: hidden;
@@ -350,9 +356,7 @@ hr {
   .alert-sucess .alert-close {
     color: #477f22; }
 
-/**
- * VI. Panels
- */
+/* ----- VII. Panels ----- */
 .panel {
   border-radius: 7px;
   overflow: hidden;
@@ -398,9 +402,7 @@ hr {
     background-color: #61a2ed;
     color: #ffffff; }
 
-/**
- * VII. Breadcrumbs
- */
+/* ----- VIII. Breadcrumbs ----- */
 .breadcrumbs {
   overflow: hidden;
   background-color: #f4f4f4;

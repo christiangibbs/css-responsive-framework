@@ -6,15 +6,16 @@
   * Licensed under MIT Open Source
   * Index
   * I. General
-  * II. Navigations
-  * III. Grids
-  * IV. Loading
-  * V. Alerts
+  * II. Navigation
+  * III. Accordion
+  * IV. Grid
+  * V. Progress Bar
+  * VI. Alerts
+  * VII. Panels
+  * VIII. Breadcrumbs
   */
 
-/**
-  * I. General
-  */
+/* ----- I. General ----- */
 
 $font-main: sans-serif
 
@@ -61,9 +62,7 @@ hr
   content: ' '
   display: table
 
-/**
-  *  II. Navigations
-  */
+/* ----- II. Navigaiton ----- */
 
 .top-bar
   height: 50px
@@ -116,10 +115,23 @@ hr
       li
         float: none
 
+/* ----- III. Accordion ----- */
 
-/**
-  *  III. Grids
-  */
+.accordion
+  dt
+    background-color: #e3e3e3
+    padding: 10px 0px
+    &::before
+      padding: 15px
+      content: '>'
+  dd
+    margin: 0px
+    background-color: #f7f7f7
+    padding: 10px
+    overflow: hidden
+
+
+/* ----- IV. Grids ----- */
 
 $colWidth: 100%
 $marginLeft: 1.5%
@@ -289,9 +301,7 @@ $singleCol: $colWidth/12
     &:nth-child(4), &:nth-child(10)
       margin-left: 0px
 
-/**
-  *  IV. Loading
-  */
+/* ----- V. Progress Bar ----- */
 
 .load
   float: left
@@ -356,9 +366,7 @@ $singleCol: $colWidth/12
   width: 10%
   background-color: #f55456
 
-/**
-  * V. Alerts
-  */
+/* ----- VI. Alerts ----- */
 
 .alert
   border-radius: 5px
@@ -401,9 +409,7 @@ $singleCol: $colWidth/12
   .alert-close
     color: #477f22
 
-/**
-  * VI. Panels
-  */
+/* ----- VII. Panels ----- */
 
 .panel
   border-radius: 7px
@@ -451,9 +457,7 @@ $singleCol: $colWidth/12
     background-color: #61a2ed
     color: #ffffff
 
-/**
-  * VII. Breadcrumbs
-  */
+/* ----- VIII. Breadcrumbs ----- */
 
 .breadcrumbs
   overflow: hidden
