@@ -16,4 +16,18 @@ $(document).ready(function(){
       }
     });
 
+    // Expanding menu
+    $('.nav-trigger').click(function(){
+      $('nav.nav-expand .nav-ul').slideToggle(300,function(){
+        $(this).toggleClass("show").css('display','');
+      });
+    });
+
+    $('.parent').click(function(){
+      if($(window).width() <= 768){
+        $('.parent .child').slideToggle(300,function(){
+          $(this).toggleClass("show-child").css('display','');
+        });
+      }
+    });
 });

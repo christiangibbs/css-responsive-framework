@@ -52,8 +52,8 @@ hr
   max-width: 90%
   margin-left: auto
   margin-right: auto
-  overflow: hidden
   margin: 5px auto
+  overflow: hidden
   .col
     &:first-child
       margin-left: 0%
@@ -72,18 +72,33 @@ hr
     padding: 0
     margin: 0
 
-.nav-dropdown
+.rotate
+  -ms-transform: rotate(0deg)
+  -webkit-transform: rotate(0deg)
+  transform: rotate(0deg)
+
+.nav-dropdown, .nav-expand
+  a.nav-trigger
+    display: none
+    float: right
+    padding: 10px
+    font-size: 20px
+    color: #ffffff
+    text-decoration: none
+    -ms-transform: rotate(90deg)
+    -webkit-transform: rotate(90deg)
+    transform: rotate(90deg)
+    &:hover
+      color: #0086ff
   ul
     width: 100%
     margin: 0
     background-color: #333333
+    list-style-type: none
+    display: block
     li
       float: left
-      list-style-type: none
-      color: #ffffff
       position: relative
-      margin: 0
-      padding: 0
       &:hover
         background-color: #222222
       &:hover > ul
@@ -96,7 +111,9 @@ hr
         display: block
         text-decoration: none
       ul
+        z-index: 1
         li
+          background-color: #222222
           ul
             top: 0
             left: 100%
@@ -114,6 +131,50 @@ hr
       background-color: #333333
       li
         float: none
+
+  .nav-ul.show
+    display: block
+  .nav-ul
+    .parent
+      .child
+        li
+          &:hover
+            background-color: #222222
+      .child.show-child
+        display: block
+
+@media screen and (min-width: 768px)
+  .nav-expand .nav-ul .parent .child.show-child
+    display: none
+@media screen and (max-width: 768px)
+  .nav-expand ul li a, .nav-expand ul li ul li a
+    padding: 0
+  .nav-expand a.nav-trigger
+    display: block
+
+  .nav-expand .nav-ul
+    width: 100%
+    padding: 0
+    display: none
+  .nav-expand .nav-ul li, .nav-expand .nav-ul li .child li
+    width: 100%
+    float: left
+    text-align: center
+    background-color: #666
+  .nav-expand .nav-ul
+    li
+      &:hover
+        ul
+          display: none
+  .nav-expand ul ul
+    width: 100%
+    margin: 0
+    padding: 0
+    list-style-type: none
+    height: auto
+    background-color: #666666
+    position: relative
+
 
 /* ----- III. Accordion ----- */
 

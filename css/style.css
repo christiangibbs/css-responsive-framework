@@ -47,8 +47,8 @@ hr {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
-  margin: 5px auto; }
+  margin: 5px auto;
+  overflow: hidden; }
   .row .col:first-child, .row .col-1:first-child, .row .col-2:first-child, .row .col-3:first-child, .row .col-4:first-child, .row .col-5:first-child, .row .col-6:first-child, .row .col-7:first-child, .row .col-8:first-child, .row .col-9:first-child, .row .col-10:first-child, .row .col-11:first-child, .row .col-12:first-child {
     margin-left: 0%; }
 
@@ -65,46 +65,103 @@ hr {
     padding: 0;
     margin: 0; }
 
-.nav-dropdown ul {
+.rotate {
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg); }
+
+.nav-dropdown a.nav-trigger, .nav-expand a.nav-trigger {
+  display: none;
+  float: right;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+  .nav-dropdown a.nav-trigger:hover, .nav-expand a.nav-trigger:hover {
+    color: #0086ff; }
+.nav-dropdown ul, .nav-expand ul {
   width: 100%;
   margin: 0;
-  background-color: #333333; }
-  .nav-dropdown ul li {
+  background-color: #333333;
+  list-style-type: none;
+  display: block; }
+  .nav-dropdown ul li, .nav-expand ul li {
     float: left;
-    list-style-type: none;
-    color: #ffffff;
-    position: relative;
-    margin: 0;
-    padding: 0; }
-    .nav-dropdown ul li:hover {
+    position: relative; }
+    .nav-dropdown ul li:hover, .nav-expand ul li:hover {
       background-color: #222222; }
-    .nav-dropdown ul li:hover > ul {
+    .nav-dropdown ul li:hover > ul, .nav-expand ul li:hover > ul {
       display: block; }
-    .nav-dropdown ul li a {
+    .nav-dropdown ul li a, .nav-expand ul li a {
       height: 50px;
       line-height: 50px;
       padding: 0px 15px;
       color: #ffffff;
       display: block;
       text-decoration: none; }
-    .nav-dropdown ul li ul li ul {
-      top: 0;
-      left: 100%;
-      position: absolute;
-      display: none; }
-    .nav-dropdown ul li ul li a {
-      padding-left: 5px;
-      height: 40px;
-      line-height: 40px; }
-  .nav-dropdown ul ul {
+    .nav-dropdown ul li ul, .nav-expand ul li ul {
+      z-index: 1; }
+      .nav-dropdown ul li ul li, .nav-expand ul li ul li {
+        background-color: #222222; }
+        .nav-dropdown ul li ul li ul, .nav-expand ul li ul li ul {
+          top: 0;
+          left: 100%;
+          position: absolute;
+          display: none; }
+        .nav-dropdown ul li ul li a, .nav-expand ul li ul li a {
+          padding-left: 5px;
+          height: 40px;
+          line-height: 40px; }
+  .nav-dropdown ul ul, .nav-expand ul ul {
     position: absolute;
     display: none;
     width: 150px;
     padding: 0;
     background-color: #333333; }
-    .nav-dropdown ul ul li {
+    .nav-dropdown ul ul li, .nav-expand ul ul li {
       float: none; }
+.nav-dropdown .nav-ul.show, .nav-expand .nav-ul.show {
+  display: block; }
+.nav-dropdown .nav-ul .parent .child li:hover, .nav-expand .nav-ul .parent .child li:hover {
+  background-color: #222222; }
+.nav-dropdown .nav-ul .parent .child.show-child, .nav-expand .nav-ul .parent .child.show-child {
+  display: block; }
 
+@media screen and (min-width: 768px) {
+  .nav-expand .nav-ul .parent .child.show-child {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .nav-expand ul li a, .nav-expand ul li ul li a {
+    padding: 0; }
+
+  .nav-expand a.nav-trigger {
+    display: block; }
+
+  .nav-expand .nav-ul {
+    width: 100%;
+    padding: 0;
+    display: none; }
+
+  .nav-expand .nav-ul li, .nav-expand .nav-ul li .child li {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background-color: #666; }
+
+  .nav-expand .nav-ul li:hover ul {
+    display: none; }
+
+  .nav-expand ul ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    height: auto;
+    background-color: #666666;
+    position: relative; } }
 /* ----- III. Accordion ----- */
 .accordion dt {
   background-color: #e3e3e3;

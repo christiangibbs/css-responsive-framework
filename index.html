@@ -5,6 +5,7 @@
   <script src="js/actions.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
+
 <section class="top-bar">
   <div class="col col-3">
     <nav class="nav-dropdown">
@@ -37,7 +38,9 @@
       </ul>
     </nav>
   </div>
+
 </section>
+
 <div class="row">
   <h1>Getting Started</h1>
   <h3>Downloading</h3>
@@ -198,36 +201,84 @@
 </section>
 <h2>Navigation Example</h2>
 <xmp>
-  <div class="load load-50">
-    <nav class="nav-dropdown">
-      <ul>
+  <nav class="nav-dropdown">
+    <ul>
+      <li>
+        <a href="#">Link</a>
+      </li>
+      <li>
+        <a href="#">Parent</a>
+        <ul>
+          <li>
+            <a href="#">Child</a>
+            <ul>
+              <li>
+                <a href="#">Grandchild</a>
+              </li>
+              <li>
+                <a href="#">Grandchild</a>
+              </li>
+              <li>
+                <a href="#">Grandchild</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Child</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</xmp>
+</div>
+
+<div class="row">
+  <h1>Responsive Navigation Menu</h1>
+</div>
+
+<div class="row">
+  <section class="top-bar">
+    <nav class="nav-expand">
+      <a class="nav-trigger">
+        |||
+      </a>
+      <ul class="nav-ul">
         <li>
-          <a href="#">Link</a>
+          <a href="#">Item</a>
         </li>
-        <li>
-          <a href="#">Parent</a>
-          <ul>
+        <li class="parent">
+          <a>Item</a>
+          <ul class="child">
             <li>
-              <a href="#">Child</a>
-              <ul>
-                <li>
-                  <a href="#">Grandchild</a>
-                </li>
-                <li>
-                  <a href="#">Grandchild</a>
-                </li>
-                <li>
-                  <a href="#">Grandchild</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Child</a>
+              <a href="http://www.google.com">Item</a>
             </li>
           </ul>
         </li>
       </ul>
     </nav>
+  </section>
+
+<h2>Responsive Navigation Example</h2>
+<xmp>
+  <nav class="nav-expand">
+    <a class="nav-trigger" href="#">
+      |||
+    </a>
+    <ul class="nav-ul">
+      <li>
+        <a href="#">Item</a>
+      </li>
+      <li class="parent">
+        <a href="#">Item</a>
+        <ul class="child">
+          <li>
+            <a href="http://www.google.com">Item</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
   </div>
 </xmp>
 </div>
