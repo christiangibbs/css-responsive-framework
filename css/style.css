@@ -19,13 +19,19 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 75%; }
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 75%;
+  overflow-x: hidden; }
   @media screen and (max-width: 376px) {
     html html {
       font-size: 50%; } }
 
 body {
-  margin: 0; }
+  margin: 0;
+  min-width: 490px; }
+
+section#head {
+  overflow: hidden; }
 
 xmp {
   background-color: #e8fdff;
@@ -47,21 +53,21 @@ hr {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin: 5px auto;
-  overflow: hidden; }
-  .row .col:first-child, .row .col-1:first-child, .row .col-2:first-child, .row .col-3:first-child, .row .col-4:first-child, .row .col-5:first-child, .row .col-6:first-child, .row .col-7:first-child, .row .col-8:first-child, .row .col-9:first-child, .row .col-10:first-child, .row .col-11:first-child, .row .col-12:first-child {
+  margin: 5px auto; }
+  .row .col:first-child, .row .col-1:first-child, .row .col-2:first-child {
     margin-left: 0%; }
 
 .row::after, .row::before {
   content: " ";
-  display: table; }
+  display: table;
+  clear: both; }
 
 /* ----- II. Navigaiton ----- */
 .top-bar {
   height: 50px;
   width: 100%;
   background-color: #333333; }
-  .top-bar .col, .top-bar .col-1, .top-bar .col-2, .top-bar .col-3, .top-bar .col-4, .top-bar .col-5, .top-bar .col-6, .top-bar .col-7, .top-bar .col-8, .top-bar .col-9, .top-bar .col-10, .top-bar .col-11, .top-bar .col-12 {
+  .top-bar .col, .top-bar .col-1, .top-bar .col-2 {
     padding: 0;
     margin: 0; }
 
@@ -73,7 +79,8 @@ hr {
 .nav-dropdown a.nav-trigger, .nav-expand a.nav-trigger {
   display: none;
   float: right;
-  padding: 10px;
+  margin-right: 20px;
+  line-height: 50px;
   font-size: 20px;
   color: #ffffff;
   text-decoration: none;
@@ -81,7 +88,8 @@ hr {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg); }
   .nav-dropdown a.nav-trigger:hover, .nav-expand a.nav-trigger:hover {
-    color: #0086ff; }
+    color: #0086ff;
+    cursor: pointer; }
 .nav-dropdown ul, .nav-expand ul {
   width: 100%;
   margin: 0;
@@ -105,7 +113,7 @@ hr {
     .nav-dropdown ul li ul, .nav-expand ul li ul {
       z-index: 1; }
       .nav-dropdown ul li ul li, .nav-expand ul li ul li {
-        background-color: #222222; }
+        background-color: #111111; }
         .nav-dropdown ul li ul li ul, .nav-expand ul li ul li ul {
           top: 0;
           left: 100%;
@@ -118,18 +126,31 @@ hr {
   .nav-dropdown ul ul, .nav-expand ul ul {
     position: absolute;
     display: none;
-    width: 150px;
+    width: 175px;
     padding: 0;
     background-color: #333333; }
     .nav-dropdown ul ul li, .nav-expand ul ul li {
       float: none; }
 .nav-dropdown .nav-ul.show, .nav-expand .nav-ul.show {
+  overflow: none;
   display: block; }
 .nav-dropdown .nav-ul .parent .child li:hover, .nav-expand .nav-ul .parent .child li:hover {
   background-color: #222222; }
 .nav-dropdown .nav-ul .parent .child.show-child, .nav-expand .nav-ul .parent .child.show-child {
   display: block; }
 
+nav.nav-expand ul li.menu-social a {
+  display: none;
+  font-size: 16px;
+  padding: 10px; }
+nav.nav-expand ul li a.menu-contact {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  nav.nav-expand ul li.menu-social a {
+    display: inline; }
+  nav.nav-expand ul li a.menu-contact {
+    display: block; } }
 @media screen and (min-width: 768px) {
   .nav-expand .nav-ul .parent .child.show-child {
     display: none; } }
@@ -150,6 +171,9 @@ hr {
     float: left;
     text-align: center;
     background-color: #666; }
+
+  .nav-expand .nav-ul .parent .child li {
+    background-color: #333; }
 
   .nav-expand .nav-ul li:hover ul {
     display: none; }
@@ -179,7 +203,7 @@ hr {
   overflow: hidden; }
 
 /* ----- IV. Grids ----- */
-.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col, .col-1, .col-2 {
   padding: 1% 0;
   float: left;
   margin: 0.75% 0 0% 1.5%; }
@@ -202,36 +226,58 @@ hr {
 
 .col-2 {
   width: 49.25%; }
+  .col-2:nth-child(2n+1) {
+    margin-left: 0px; }
 
 .col-3 {
   width: 32.33333%; }
+  .col-3:nth-child(3n+1) {
+    margin-left: 0px; }
 
 .col-4 {
   width: 23.875%; }
+  .col-4:nth-child(4n+1) {
+    margin-left: 0px; }
 
 .col-5 {
   width: 18.8%; }
+  .col-5:nth-child(5n+1) {
+    margin-left: 0px; }
 
 .col-6 {
   width: 15.41667%; }
+  .col-6:nth-child(6n+1) {
+    margin-left: 0px; }
 
 .col-7 {
   width: 13%; }
+  .col-7:nth-child(7n+1) {
+    margin-left: 0px; }
 
 .col-8 {
   width: 11.1875%; }
+  .col-8:nth-child(8n+1) {
+    margin-left: 0px; }
 
 .col-9 {
   width: 9.77778%; }
+  .col-9:nth-child(9n+1) {
+    margin-left: 0px; }
 
 .col-10 {
   width: 8.65%; }
+  .col-10:nth-child(10n+1) {
+    margin-left: 0px; }
 
 .col-11 {
   width: 7.72727%; }
+  .col-11:nth-child(11n+1) {
+    margin-left: 0px; }
 
 .col-12 {
   width: 6.95833%; }
+  .col-12:nth-child(12n+1) {
+    margin-left: 0px; }
 
 /* 768 */
 @media screen and (max-width: 768px) {
@@ -278,48 +324,6 @@ hr {
   .col-12 {
     width: 100%;
     margin: 5px 0px; } }
-/*
- * .col-4
- *   width: $colWidth/2 - 1*($marginLeft/2)
- *   margin-bottom: 10px
- *   &:nth-child(3)
- *     margin-left: 0px
- *
- * .col-6
- *   width: $colWidth/3 - 2*($marginLeft/3)
- *   margin-bottom: 10px
- *   &:nth-child(4)
- *     margin-left: 0px
- *
- * .col-8
- *   width: $colWidth/4 - 3*($marginLeft/4)
- *   margin-bottom: 10px
- *   &:nth-child(5)
- *     margin-left: 0px
- *
- * .col-10
- *   width: $colWidth/5 - 4*($marginLeft/5)
- *   margin-bottom: 10px
- *   &:nth-child(6)
- *     margin-left: 0px
- *
- * .col-12
- *   width: $colWidth/6 - 5*($marginLeft/6)
- *   margin-bottom: 10px
- *   &:nth-child(7)
- *     margin-left: 0px */
-@media screen and (max-width: 624px) {
-  /* .col-2
-   * width: 100%
-   * margin-left: 0px */
-  /* .col-3
-   * width: 100%
-   * margin-left: 0px */ }
-/* 376 */
-/* .col-1-12
- *   width: $colWidth/3 - 2*($marginLeft/3)
- *   &:nth-child(4), &:nth-child(10)
- *     margin-left: 0px */
 /* ----- V. Progress Bar ----- */
 .load, .load-100, .load-90, .load-80, .load-70, .load-60, .load-50, .load-40, .load-30, .load-20, .load-10 {
   float: left;
