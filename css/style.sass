@@ -293,18 +293,22 @@ $singleCol: $colWidth/12
 
 $class-slug: col !default
 
+/* for loop for each 12 grids and create a unique class styling */
 @for $i from 3 through 12
   .#{$class-slug}-#{$i}
     width: $colWidth/$i - (($i)-1)*($marginLeft/$i)
     &:nth-child(#{$i}n+1)
       margin-left: 0px
 
-/* 768 */
-@media screen and (max-width: 768px)
-  $class-slug: col !default
+@for $i from 2 through 12
+  .#{$class-slug}-#{p}-#{$i}
+    width: $i*($colWidth/12)
 
+// 768 width (responsive)
+/* expand each to 100% */
+@media screen and (max-width: 768px)
   @for $i from 2 through 12
-    .#{$class-slug}-#{$i}
+    .#{$class-slug}-#{$i}, .#{$class-slug}-#{p}-#{$i}
       width: 100%
       margin: 5px 0px
 
